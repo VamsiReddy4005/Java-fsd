@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="customerpayment.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Payment</h2>
+        <form id="paymentForm" onsubmit="return processPayment()">
+            <label for="billAmount">Bill Amount:</label>
+            <input type="text" id="billAmount" name="billAmount" readonly>
+            <label for="paymentMode">Mode of Payment:</label>
+            <select id="paymentMode" name="paymentMode">
+                <option value="debit">Debit</option>
+                <option value="credit">Credit</option>
+            </select>
+            <button type="submit">Pay Now</button>
+            <button type="button" onclick="backToHome()">Back to Home</button>
+        </form>
+        <div id="cardDetails" style="display:none;">
+            <h3>Credit Card Details</h3>
+            <form id="cardForm" onsubmit="return makePayment()">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" required>
+                <label for="cardHolderName">Card Holder Name:</label>
+                <input type="text" id="cardHolderName" name="cardHolderName" required>
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" pattern="\d{2}/\d{2}" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" pattern="\d{3}" required>
+                <button type="submit">Make Payment</button>
+            </form>
+        </div>
+    </div>
+    <script src="customerpayment.js"></script>
+</body>
+</html>

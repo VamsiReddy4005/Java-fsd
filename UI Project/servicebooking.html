@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Service</title>
+    <link rel="stylesheet" href="servicebooking.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h2>Booking Service</h2>
+        <form id="bookingForm" onsubmit="return bookService()">
+            <fieldset>
+                <legend>Sender Information</legend>
+                <label for="senderName">Name:</label>
+                <input type="text" id="senderName" name="senderName" readonly>
+                <label for="senderAddress">Address:</label>
+                <input type="text" id="senderAddress" name="senderAddress" readonly>
+                <label for="senderContact">Contact Details:</label>
+                <input type="text" id="senderContact" name="senderContact" readonly>
+            </fieldset>
+            <fieldset>
+                <legend>Receiver Information</legend>
+                <label for="receiverName">Name:</label>
+                <input type="text" id="receiverName" name="receiverName" required>
+                <label for="receiverAddress">Address:</label>
+                <input type="text" id="receiverAddress" name="receiverAddress" required>
+                <label for="receiverPinCode">Pin Code:</label>
+                <input type="text" id="receiverPinCode" name="receiverPinCode" required>
+                <label for="receiverContact">Contact Details:</label>
+                <input type="text" id="receiverContact" name="receiverContact" required>
+            </fieldset>
+            <fieldset>
+                <legend>Parcel Details</legend>
+                <label for="parcelSize">Size:</label>
+                <input type="text" id="parcelSize" name="parcelSize" required>
+                <label for="parcelWeight">Weight:</label>
+                <input type="text" id="parcelWeight" name="parcelWeight" required>
+                <label for="parcelContents">Contents:</label>
+                <input type="text" id="parcelContents" name="parcelContents" required>
+            </fieldset>
+            <fieldset>
+                <legend>Shipping Options</legend>
+                <label for="deliverySpeed">Delivery Speed:</label>
+                <select id="deliverySpeed" name="deliverySpeed">
+                    <option value="standard">Standard</option>
+                    <option value="express">Express</option>
+                </select>
+                <label for="packagingPreferences">Packaging Preferences:</label>
+                <select id="packagingPreferences" name="packagingPreferences">
+                    <option value="standard">Standard</option>
+                    <option value="custom">Custom</option>
+                    <option value="eco">Eco-friendly</option>
+                    <option value="fragile">Fragile Item Handling</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Date and Time Selection</legend>
+                <label for="pickupDate">Pickup/Drop-off Date:</label>
+                <input type="date" id="pickupDate" name="pickupDate" required>
+                <label for="pickupTime">Pickup/Drop-off Time:</label>
+                <input type="time" id="pickupTime" name="pickupTime" required>
+            </fieldset>
+            <fieldset>
+                <legend>Service Cost</legend>
+                <label for="serviceCost">Cost:</label>
+                <input type="text" id="serviceCost" name="serviceCost" readonly>
+            </fieldset>
+            <div id="error-message" class="error-message"></div>
+            <button type="submit">Book Service</button>
+        </form>
+    </div>
+    <script src="servicebooking.js"></script>
+</body>
+</html>

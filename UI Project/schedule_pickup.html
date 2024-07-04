@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Pickup</title>
+    <link rel="stylesheet" href="schedule_pickup.css">
+</head>
+<body>
+    <div class="schedule-container">
+        <h2>Schedule Pickup</h2>
+        <form id="pickupForm">
+            <label for="bookingId">Booking ID:</label>
+            <input type="text" id="bookingId" name="bookingId" required>
+            <label for="pickupDate">Pickup Date:</label>
+            <input type="date" id="pickupDate" name="pickupDate" required>
+            <label for="pickupTime">Pickup Time:</label>
+            <input type="time" id="pickupTime" name="pickupTime" required>
+            <button type="button" onclick="schedulePickup()">Save</button>
+        </form>
+        <div id="pickupStatus"></div>
+    </div>
+    <script src="schedule_pickup.js"></script>
+</body>
+</html>

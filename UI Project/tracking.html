@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Tracking</title>
+    <link rel="stylesheet" href="tracking.css">
+</head>
+<body>
+    <div class="tracking-container">
+        <h2>Track Your Parcel</h2>
+        <form id="trackingForm">
+            <label for="bookingId">Booking ID:</label>
+            <input type="text" id="bookingId" name="bookingId" required>
+            <button type="button" onclick="trackParcel()">Search</button>
+        </form>
+        <div id="trackingStatus"></div>
+    </div>
+    <script src="tracking.js"></script>
+</body>
+</html>

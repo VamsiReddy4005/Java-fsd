@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Package Status</title>
+    <link rel="stylesheet" href="officer_view.css">
+</head>
+<body>
+    <div class="officer-container">
+        <h2>Package Status</h2>
+        <form id="statusForm">
+            <label for="customerId">Customer ID:</label>
+            <input type="text" id="customerId" name="customerId">
+            <label for="bookingId">Booking ID:</label>
+            <input type="text" id="bookingId" name="bookingId">
+            <button type="button" onclick="searchStatus()">Search</button>
+        </form>
+        <div id="packageStatus"></div>
+    </div>
+    <script src="officer_view.js"></script>
+</body>
+</html>

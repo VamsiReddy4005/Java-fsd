@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Booking History</title>
+    <link rel="stylesheet" href="officer_booking_history.css">
+</head>
+<body>
+    <div class="officer-history-container">
+        <h2>Booking History</h2>
+        <div class="welcome">
+            <span>Welcome <span id="username">Officer</span></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <form id="filterForm">
+            <label for="customerId">Customer ID:</label>
+            <input type="text" id="customerId" name="customerId">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate">
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate">
+            <button type="button" onclick="filterHistory()">Filter</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Booking ID</th>
+                    <th>Booking Date</th>
+                    <th>Receiver Name</th>
+                    <th>Delivered Address</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="bookingHistory">
+                <!-- Booking history will be populated here -->
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button onclick="previousPage()">Previous</button>
+            <button onclick="nextPage()">Next</button>
+        </div>
+    </div>
+    <script src="officer_booking_history.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="invoice.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <h2>Invoice</h2>
+        <div class="invoice-details">
+            <label>Receiver Name:</label>
+            <p id="receiverName"></p>
+            <label>Receiver Address:</label>
+            <p id="receiverAddress"></p>
+            <label>Receiver Pin:</label>
+            <p id="receiverPin"></p>
+            <label>Receiver Mobile:</label>
+            <p id="receiverMobile"></p>
+            <label>Parcel Weight (g):</label>
+            <p id="parcelWeight"></p>
+            <label>Parcel Contents Description:</label>
+            <p id="parcelContents"></p>
+            <label>Parcel Delivery Type:</label>
+            <p id="parcelDeliveryType"></p>
+            <label>Parcel Packing Preference:</label>
+            <p id="parcelPackingPreference"></p>
+            <label>Parcel Pickup Time:</label>
+            <p id="parcelPickupTime"></p>
+            <label>Parcel Dropoff Time:</label>
+            <p id="parcelDropoffTime"></p>
+            <label>Parcel Service Cost:</label>
+            <p id="parcelServiceCost"></p>
+            <label>Parcel Payment Time:</label>
+            <p id="parcelPaymentTime"></p>
+        </div>
+        <button onclick="window.print()">Print Invoice</button>
+    </div>
+    <script src="invoice.js"></script>
+</body>
+</html>
